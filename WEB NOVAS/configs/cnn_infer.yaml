@@ -1,0 +1,32 @@
+
+
+model:
+  model_path: "models/best_cnn_phase1.pth"
+  input_size: 128
+  channels: 1
+
+inference:
+  confidence_threshold: 0.65
+  entropy_threshold: 1.6
+  reject_invalid_images: true
+
+classes:
+  - Center
+  - Donut
+  - Edge-Loc
+  - Edge-Ring
+  - Local
+  - Near-Full
+  - Normal
+  - Random
+  - Scratch
+
+edge:
+  deployment: RaspberryPi
+  framework: PyTorch
+  quantization_ready: true
+
+output:
+  show_confidence: true
+  show_entropy: true
+  invalid_label: "Invalid / Non-Wafer Image"

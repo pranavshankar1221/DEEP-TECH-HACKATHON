@@ -1,0 +1,37 @@
+
+project:
+  name: Edge-AI Wafer Defect Classification
+  phase: Phase-1
+  model: SimpleCNN
+
+data:
+  train_dir: "data/train"
+  val_dir: "data/valid"
+  test_dir: "data/test"
+  image_size: 128
+  channels: 1
+  num_classes: 9
+
+training:
+  epochs: 4
+  batch_size: 16
+  learning_rate: 0.0001
+  optimizer: adam
+  loss_function: cross_entropy
+  dropout: 0.3
+  weight_decay: 0.00001
+  save_best_model: true
+
+augmentation:
+  grayscale: true
+  horizontal_flip: true
+  rotation_degree: 10
+  normalization: true
+
+device:
+  accelerator: auto   # auto / cpu / cuda
+
+output:
+  model_dir: "models/"
+  best_model_name: "best_cnn_phase1.pth"
+  save_checkpoint: true

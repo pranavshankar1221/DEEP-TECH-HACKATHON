@@ -1,0 +1,9 @@
+Camera / Image
+      ↓
+Preprocessing
+      ↓
+CNN Inference
+      ↓
+Confidence + Entropy Check
+      ↓
+Valid Defect Class / Invalid Image
