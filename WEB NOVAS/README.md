@@ -87,14 +87,3 @@ Raspberry Pi, NXP i.MX series, NVIDIA Jetson Nano/Xavier, industrial edge system
 
 ---
 
-## 8. Repository Structure
-
-WEB NOVAS/
-├── src/ # Model, training, inference
-├── scripts/ # Training and conversion scripts
-├── notebooks/ # Experiments
-├── configs/ # Configuration files
-├── assets/ # Diagrams and figures
-├── docs/ # Documentation
-├── README.md
-├── requirements.txt
